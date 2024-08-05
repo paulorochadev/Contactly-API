@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Contactly_API.Models.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contactly_API.Models.Data
 {
@@ -7,5 +8,7 @@ namespace Contactly_API.Models.Data
         public ContactlyDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public DbSet<Contact> Contacts { get; set; }
     }
 }
